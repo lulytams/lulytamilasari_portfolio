@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lulyta Milasari | Indonesian Audio Evaluator & Voice Quality Specialist</title>
+    <meta name="description" content="Native Indonesian & Javanese speaker specializing in audio quality evaluation, voice assessment, and regional accent recognition for AI training and localization projects.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Color Palette - Warm, Professional, Memorable */
+            --primary: #2C5F7C;
+            --primary-light: #4A8CAD;
+            --primary-dark: #1A3D52;
+            --accent: #D4956D;
+            --accent-light: #E8B896;
+            --text-dark: #1A1A1A;
+            --text-medium: #4A4A4A;
+            --text-light: #7A7A7A;
+            --bg-main: #FEFDFB;
+            --bg-section: #F8F6F3;
+            --bg-card: #FFFFFF;
+            --border: #E8E5E0;
+            
+            /* Typography */
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'DM Sans', sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            background: var(--bg-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(254, 253, 251, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        
+        nav.scrolled {
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-medium);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(135deg, var(--bg-main) 0%, var(--bg-section) 100%);
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(212, 149, 109, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(-30px, 30px) rotate(5deg); }
+            50% { transform: translate(0, 60px) rotate(0deg); }
+            75% { transform: translate(30px, 30px) rotate(-5deg); }
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-label {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: var(--accent-light);
+            color: var(--primary-dark);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+        
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        
+        .hero h1 .accent-text {
+            color: var(--accent);
+            display: block;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-medium);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+        
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 2px solid transparent;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 10px 30px rgba(44, 95, 124, 0.2);
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(44, 95, 124, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-label {
+            display: inline-block;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.875rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-medium);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        /* About Section */
+        #about {
+            background: var(--bg-section);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-text h3 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text p {
+            color: var(--text-medium);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .language-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .language-card {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        
+        .language-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .language-name {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .language-level {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-card {
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--primary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .skill-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .skill-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .skill-description {
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+        
+        /* Experience Section */
+        #experience {
+            background: var(--bg-section);
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent), var(--primary));
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.5rem;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background: var(--accent);
+            border: 3px solid var(--bg-section);
+            border-radius: 50%;
+        }
+        
+        .timeline-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-card:hover {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transform: translateX(10px);
+        }
+        
+        .timeline-period {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-company {
+            color: var(--text-medium);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .timeline-description {
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+        
+        .timeline-description ul {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+        
+        .timeline-description li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .contact-info h3 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info p {
+            color: var(--text-medium);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border-radius: 15px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+        
+        .contact-method:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent);
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+        
+        .contact-details strong {
+            display: block;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+        
+        .contact-details span {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .social-link {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 50%;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.25rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        /* Availability Card */
+        .availability-card {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            padding: 2.5rem;
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0 20px 40px rgba(44, 95, 124, 0.2);
+        }
+        
+        .availability-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .availability-card p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+        }
+        
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            font-weight: 600;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #4ADE80;
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        
+        footer p {
+            opacity: 0.8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1.5rem;
+            }
+            
+            .about-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .language-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            section {
+                padding: 4rem 1.5rem;
+            }
+            
+            .timeline {
+                padding-left: 2rem;
+            }
+        }
+        
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">LM</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-label">AUDIO QUALITY SPECIALIST</span>
+            <h1>
+                Lulyta Milasari
+                <span class="accent-text">Voice Evaluation Expert</span>
+            </h1>
+            <p class="hero-subtitle">
+                Native Indonesian & Javanese speaker specializing in audio quality evaluation, 
+                regional accent recognition, and voice assessment for AI training and localization projects.
+            </p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                <a href="#experience" class="btn btn-secondary">View Experience</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header reveal">
+            <span class="section-label">Who I Am</span>
+            <h2 class="section-title">About Me</h2>
+        </div>
+        
+        <div class="about-content">
+            <div class="about-text reveal">
+                <h3>Native Linguistic Expertise Meets Professional Quality Standards</h3>
+                <p>
+                    Based in Jakarta, I bring authentic native understanding of Indonesian regional variations 
+                    combined with structured evaluation experience. Growing up in Java and living across Indonesia 
+                    has given me firsthand exposure to diverse speech patterns that cannot be taught from textbooks.
+                </p>
+                <p>
+                    My work focuses on ensuring AI systems reflect linguistic diversity and cultural authenticity. 
+                    Through rigorous audio evaluation, I help train AI that delivers natural, inclusive experiences 
+                    for users across Indonesia and beyond.
+                </p>
+                <p>
+                    With nearly 4 years at Shopee Indonesia and recent voice evaluation work for VMEG.AI, I've honed 
+                    my attention to auditory detail, analytical precision, and ability to maintain consistent quality 
+                    standards in remote collaborative environments.
+                </p>
+            </div>
+            
+            <div class="reveal">
+                <h3 style="font-family: var(--font-display); font-size: 1.75rem; color: var(--primary); margin-bottom: 1.5rem;">
+                    Language Proficiency
+                </h3>
+                <div class="language-grid">
+                    <div class="language-card">
+                        <div class="language-name">🇮🇩 Indonesian</div>
+                        <div class="language-level">Native - Accent Neutral</div>
+                    </div>
+                    <div class="language-card">
+                        <div class="language-name">Javanese</div>
+                        <div class="language-level">Native - Fluent</div>
+                    </div>
+                    <div class="language-card">
+                        <div class="language-name">🇬🇧 English</div>
+                        <div class="language-level">Conversational</div>
+                    </div>
+                    <div class="language-card">
+                        <div class="language-name">🇩🇪 German</div>
+                        <div class="language-level">Basic</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-header reveal">
+            <span class="section-label">What I Do</span>
+            <h2 class="section-title">Core Expertise</h2>
+            <p class="section-description">
+                Specialized skills in audio evaluation, quality assessment, and linguistic analysis 
+                for AI training and localization projects.
+            </p>
+        </div>
+        
+        <div class="skills-grid">
+            <div class="skill-card reveal">
+                <div class="skill-icon">🎧</div>
+                <h3 class="skill-title">Audio Quality Evaluation</h3>
+                <p class="skill-description">
+                    Expert assessment of voice consistency, naturalness, prosody, and speaker identity. 
+                    Evaluate audio across multiple dimensions including pitch stability, emotional tone, 
+                    and performance under challenging conditions.
+                </p>
+            </div>
+            
+            <div class="skill-card reveal">
+                <div class="skill-icon">🗣️</div>
+                <h3 class="skill-title">Regional Accent Recognition</h3>
+                <p class="skill-description">
+                    Native understanding of Indonesian dialects including Javanese, Sundanese, Betawi, 
+                    Batak, Minang, and Jakarta accents. Identify subtle variations in pronunciation, 
+                    intonation, and speech patterns.
+                </p>
+            </div>
+            
+            <div class="skill-card reveal">
+                <div class="skill-icon">🎯</div>
+                <h3 class="skill-title">Voice Selection & Curation</h3>
+                <p class="skill-description">
+                    Select top-performing voices from large candidate pools (60-100+) based on clarity, 
+                    pronunciation accuracy, and naturalness. Apply consistent evaluation criteria across 
+                    multiple text samples.
+                </p>
+            </div>
+            
+            <div class="skill-card reveal">
+                <div class="skill-icon">✨</div>
+                <h3 class="skill-title">Quality Assurance</h3>
+                <p class="skill-description">
+                    Maintain rigorous quality standards through structured evaluation frameworks. 
+                    Provide actionable feedback identifying specific issues and improvement opportunities 
+                    with precision and consistency.
+                </p>
+            </div>
+            
+            <div class="skill-card reveal">
+                <div class="skill-icon">🌐</div>
+                <h3 class="skill-title">Translation Review</h3>
+                <p class="skill-description">
+                    Assess vocabulary appropriateness, cultural authenticity, and voice usability in 
+                    translated content. Ensure audio-video synchronization and accent naturalness align 
+                    with target audience expectations.
+                </p>
+            </div>
+            
+            <div class="skill-card reveal">
+                <div class="skill-icon">💼</div>
+                <h3 class="skill-title">Remote Collaboration</h3>
+                <p class="skill-description">
+                    Proven ability to work independently with excellent time management. Deliver 
+                    consistent, high-quality outputs while maintaining professional communication and 
+                    meeting project deadlines.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="section-header reveal">
+            <span class="section-label">My Journey</span>
+            <h2 class="section-title">Professional Experience</h2>
+        </div>
+        
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-card">
+                    <div class="timeline-period">Nov 2025 - Jan 2026</div>
+                    <h3 class="timeline-title">Javanese Voice Selection & Dubbing Quality Evaluator</h3>
+                    <div class="timeline-company">VMEG.AI • Contract Expert Collaboration • Remote (Hong Kong)</div>
+                    <div class="timeline-description">
+                        <p>Expert collaboration on AI dubbing and voice localization platform, evaluating voice quality across critical dimensions.</p>
+                        <ul>
+                            <li>Evaluated dubbed video content using 4-dimension framework: Consistency, Naturalness, Intent & Emotion, and Robustness</li>
+                            <li>Selected top 5 voices from libraries of 60-100+ candidates based on clarity, pronunciation, and naturalness</li>
+                            <li>Provided actionable evaluation notes identifying speaker identity issues, pacing irregularities, and emotional tone misalignment</li>
+                            <li>Monitored post-translation accent characteristics and audio-video synchronization quality</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-item reveal">
+                <div class="timeline-card">
+                    <div class="timeline-period">Feb 2021 - Dec 2023</div>
+                    <h3 class="timeline-title">Senior Analyst - Refund & Return / Dispute Resolution</h3>
+                    <div class="timeline-company">PT Shopee International Indonesia • Jakarta Selatan</div>
+                    <div class="timeline-description">
+                        <p>Resolved complex customer cases with rigorous quality standards and analytical precision.</p>
+                        <ul>
+                            <li>Managed 80+ complex refund and return cases daily with detailed evidence analysis</li>
+                            <li>Handled high-complexity Backlog Cases requiring advanced analysis and extended timelines</li>
+                            <li>Maintained consistent adherence to internal policies and SLA requirements</li>
+                            <li><strong>Achievement:</strong> Runner-Up Best Agent (Jan 2022)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-item reveal">
+                <div class="timeline-card">
+                    <div class="timeline-period">Jun 2020 - Feb 2021</div>
+                    <h3 class="timeline-title">Social Media Analyst - Customer Service</h3>
+                    <div class="timeline-company">PT Shopee International Indonesia • Jakarta Selatan</div>
+                    <div class="timeline-description">
+                        <p>Managed high-volume customer inquiries across multiple platforms with quality focus.</p>
+                        <ul>
+                            <li>Handled 110-150 daily customer cases across 7+ social media and app store platforms</li>
+                            <li>Utilized Salesforce CRM for comprehensive case tracking and documentation</li>
+                            <li><strong>Achievement:</strong> Best Agent CCS Division (Nov 2020 - Jan 2021)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-header reveal">
+            <span class="section-label">Let's Connect</span>
+            <h2 class="section-title">Get In Touch</h2>
+        </div>
+        
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <h3>Ready to Collaborate</h3>
+                <p>
+                    I'm always interested in audio evaluation projects, voice localization work, 
+                    and opportunities to contribute to ethical AI development. Whether you need 
+                    Indonesian accent expertise or quality assessment services, let's discuss how 
+                    I can help.
+                </p>
+                
+                <div class="contact-methods">
+                    <a href="mailto:lulyta.milasari@gmail.com" class="contact-method">
+                        <span class="contact-icon">📧</span>
+                        <div class="contact-details">
+                            <strong>Email</strong>
+                            <span>lulyta.milasari@gmail.com</span>
+                        </div>
+                    </a>
+                    
+                    <a href="https://wa.me/6282223667577" class="contact-method" target="_blank">
+                        <span class="contact-icon">📱</span>
+                        <div class="contact-details">
+                            <strong>WhatsApp</strong>
+                            <span>+62 822-2366-7577</span>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/lulyta-milasari" class="contact-method" target="_blank">
+                        <span class="contact-icon">💼</span>
+                        <div class="contact-details">
+                            <strong>LinkedIn</strong>
+                            <span>linkedin.com/in/lulyta-milasari</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/lulyta-milasari" class="social-link" target="_blank">in</a>
+                    <a href="https://github.com/lulytams" class="social-link" target="_blank">gh</a>
+                </div>
+            </div>
+            
+            <div class="reveal">
+                <div class="availability-card">
+                    <h3>Current Availability</h3>
+                    <p>
+                        I'm currently available for freelance and project-based audio evaluation work. 
+                        Open to long-term collaborations with flexible hours that accommodate different time zones.
+                    </p>
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        Available for Projects
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2rem; padding: 2rem; background: var(--bg-card); border-radius: 15px; border: 1px solid var(--border);">
+                    <h4 style="font-family: var(--font-display); font-size: 1.25rem; color: var(--primary); margin-bottom: 1rem;">
+                        Based in Jakarta, Indonesia
+                    </h4>
+                    <p style="color: var(--text-medium); line-height: 1.7; margin-bottom: 1rem;">
+                        Professional home office setup with high-quality audio equipment and reliable internet connection. 
+                        Experienced in remote work with proven ability to deliver consistent quality outputs.
+                    </p>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">
+                        <strong>Working Hours:</strong> Flexible • <strong>Time Zone:</strong> WIB (UTC+7)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Lulyta Milasari. Building better AI through authentic linguistic expertise.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Scroll reveal animation
+        const reveals = document.querySelectorAll('.reveal');
+        
+        const revealOnScroll = () => {
+            reveals.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('active');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Initial check
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
